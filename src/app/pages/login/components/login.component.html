@@ -1,0 +1,16 @@
+<div class="flex flex-col justify-center items-center h-screen">
+  <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center" *ngIf="!data">
+    Connect wallet
+  </div>
+  <div *ngIf="data">
+    <h1>Address wallet</h1>
+    <h2> {{ data }}</h2>
+    <h1>Amount</h1>
+    <h2>{{ amount }}</h2>
+  </div>
+  <div class="flex flex-col p-3">
+    <button class="bg-orange-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" (click)="Connect()" *ngIf="!data">
+      Connect your wallet
+    </button>
+  </div>
+</div>
